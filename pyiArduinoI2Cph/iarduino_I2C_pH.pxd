@@ -10,3 +10,20 @@ cdef extern from "iarduino_I2C_pH.h":
         bint reset()
         unsigned char getAddress()
         unsigned char getVersion()
+
+        bint getPullI2C();
+        bint setPullI2C(bint);
+        bint setCalibration(uint8_t, float);
+        float getKnownPH(unsigned char);
+        bint setKnownPH(unsigned char, float);
+        float getKy();
+        bint setKy(float);
+        float getVstp();
+        bint setVstp(float);
+        float getVin();
+        float getVout();
+        float getVn();
+        float getPHn();
+        bint setPHn(float);
+        float getPH();
+
