@@ -6,7 +6,7 @@ def readme():
         return readme.read()
 
 setup(name='pyiArduinoI2Cph',
-    version='0.0.1',
+    version='0.0.2',
     description='iarduino.ru module for Raspberry Pi',
     long_description=readme(),
     classifiers=[
