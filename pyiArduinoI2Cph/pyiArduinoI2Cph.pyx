@@ -133,3 +133,7 @@ cdef class pyiArduinoI2Cph:
 
     def getPH(self):
         return self.c_module.getPH()
+
+    def getCalibration(self):
+        return self.c_module.getCalibration()
+

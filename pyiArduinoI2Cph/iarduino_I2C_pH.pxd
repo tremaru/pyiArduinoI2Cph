@@ -26,4 +26,4 @@ cdef extern from "iarduino_I2C_pH.h":
         float getPHn();
         bint setPHn(float);
         float getPH();
-
+        unsigned char getCalibration();

@@ -1264,8 +1264,9 @@ static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_
 static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_36getPHn(struct __pyx_obj_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_38setPHn(struct __pyx_obj_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph *__pyx_v_self, PyObject *__pyx_v_PHn); /* proto */
 static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_40getPH(struct __pyx_obj_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_42__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_44__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_42getCalibration(struct __pyx_obj_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_44__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_46__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_tp_new_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_1;
@@ -2883,6 +2884,7 @@ static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_
  * 
  *     def getPH(self):             # <<<<<<<<<<<<<<
  *         return self.c_module.getPH()
+ * 
  */
 
 /* Python wrapper */
@@ -2908,6 +2910,8 @@ static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_
  * 
  *     def getPH(self):
  *         return self.c_module.getPH()             # <<<<<<<<<<<<<<
+ * 
+ *     def getCalibration(self):
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->c_module.getPH()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
@@ -2921,12 +2925,72 @@ static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_
  * 
  *     def getPH(self):             # <<<<<<<<<<<<<<
  *         return self.c_module.getPH()
+ * 
  */
 
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_AddTraceback("pyiArduinoI2Cph.pyiArduinoI2Cph.pyiArduinoI2Cph.getPH", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "pyiArduinoI2Cph/pyiArduinoI2Cph.pyx":137
+ *         return self.c_module.getPH()
+ * 
+ *     def getCalibration(self):             # <<<<<<<<<<<<<<
+ *         return self.c_module.getCalibration()
+ * 
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_43getCalibration(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_43getCalibration(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("getCalibration (wrapper)", 0);
+  __pyx_r = __pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_42getCalibration(((struct __pyx_obj_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_42getCalibration(struct __pyx_obj_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  __Pyx_RefNannySetupContext("getCalibration", 0);
+
+  /* "pyiArduinoI2Cph/pyiArduinoI2Cph.pyx":138
+ * 
+ *     def getCalibration(self):
+ *         return self.c_module.getCalibration()             # <<<<<<<<<<<<<<
+ * 
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __Pyx_PyInt_From_unsigned_char(__pyx_v_self->c_module.getCalibration()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* "pyiArduinoI2Cph/pyiArduinoI2Cph.pyx":137
+ *         return self.c_module.getPH()
+ * 
+ *     def getCalibration(self):             # <<<<<<<<<<<<<<
+ *         return self.c_module.getCalibration()
+ * 
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("pyiArduinoI2Cph.pyiArduinoI2Cph.pyiArduinoI2Cph.getCalibration", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2941,19 +3005,19 @@ static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_43__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_43__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_45__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_45__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__reduce_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_42__reduce_cython__(((struct __pyx_obj_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph *)__pyx_v_self));
+  __pyx_r = __pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_44__reduce_cython__(((struct __pyx_obj_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_42__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph *__pyx_v_self) {
+static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_44__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2995,19 +3059,19 @@ static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_45__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
-static PyObject *__pyx_pw_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_45__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pw_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_47__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
+static PyObject *__pyx_pw_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_47__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__setstate_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_44__setstate_cython__(((struct __pyx_obj_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
+  __pyx_r = __pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_46__setstate_cython__(((struct __pyx_obj_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_44__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_46__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI2Cph *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3091,8 +3155,9 @@ static PyMethodDef __pyx_methods_15pyiArduinoI2Cph_15pyiArduinoI2Cph_pyiArduinoI
   {"getPHn", (PyCFunction)__pyx_pw_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_37getPHn, METH_NOARGS, 0},
   {"setPHn", (PyCFunction)__pyx_pw_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_39setPHn, METH_O, 0},
   {"getPH", (PyCFunction)__pyx_pw_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_41getPH, METH_NOARGS, 0},
-  {"__reduce_cython__", (PyCFunction)__pyx_pw_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_43__reduce_cython__, METH_NOARGS, 0},
-  {"__setstate_cython__", (PyCFunction)__pyx_pw_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_45__setstate_cython__, METH_O, 0},
+  {"getCalibration", (PyCFunction)__pyx_pw_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_43getCalibration, METH_NOARGS, 0},
+  {"__reduce_cython__", (PyCFunction)__pyx_pw_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_45__reduce_cython__, METH_NOARGS, 0},
+  {"__setstate_cython__", (PyCFunction)__pyx_pw_15pyiArduinoI2Cph_15pyiArduinoI2Cph_15pyiArduinoI2Cph_47__setstate_cython__, METH_O, 0},
   {0, 0, 0, 0}
 };
 
