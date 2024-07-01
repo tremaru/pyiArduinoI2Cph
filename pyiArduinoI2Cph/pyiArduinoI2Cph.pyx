@@ -38,11 +38,14 @@ NO_BEGIN = 1
 cdef class pyiArduinoI2Cph:
     cdef iarduino_I2C_pH c_module
 
-    def __cinit__(self, address=None, auto=None):
+    def __cinit__(self, address=None, auto=None, bus=None):
 
         if address is not None:
 
             self.c_module = iarduino_I2C_pH(address)
+
+            if bus is not None:
+                self.changeBus(bus)
 
             if auto is None:
                 #sleep(.5)
@@ -58,6 +61,9 @@ cdef class pyiArduinoI2Cph:
         else:
 
             self.c_module = iarduino_I2C_pH()
+
+            if bus is not None:
+                self.changeBus(bus)
 
             if auto is None:
                 #sleep(.5)
@@ -93,7 +99,6 @@ cdef class pyiArduinoI2Cph:
             return self.c_module.setPullI2C(True)
         if flag is not None:
             return self.c_module.setPullI2C(flag)
-
 
     def setCalibration(self, num, pH):
         return self.c_module.setCalibration(num, pH)
@@ -137,3 +142,11 @@ cdef class pyiArduinoI2Cph:
     def getCalibration(self):
         return self.c_module.getCalibration()
 
+    def changeBus(self, bus):
+        return self.c_module.changeBus(bytes(bus, 'utf-8'))
+
+    def getResultCalib(self):
+        return self.c_module.getResultCalib()
+
+    def getStability(self):
+        return self.c_module.getStability()
